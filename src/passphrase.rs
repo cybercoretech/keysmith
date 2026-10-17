@@ -3,7 +3,7 @@
 //! characters. Genuinely more memorable per bit of entropy for a human,
 //! which is the entire point of diceware as a method.
 
-use rand::Rng;
+use rand::{rngs::OsRng, Rng};
 
 pub fn generate(
     word_count: usize,
@@ -14,7 +14,9 @@ pub fn generate(
     if word_count == 0 || wordlist.is_empty() {
         return None;
     }
-    let mut rng = rand::thread_rng();
+    // Draw directly from the operating system CSPRNG so this API is suitable
+    // for generating secrets consumed by other applications.
+    let mut rng = OsRng;
     let words: Vec<String> = (0..word_count)
         .map(|_| {
             let w = wordlist[rng.gen_range(0..wordlist.len())];

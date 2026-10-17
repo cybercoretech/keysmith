@@ -11,6 +11,12 @@
 
 **[cybercore-tech.github.io/keysmith](https://cybercore-tech.github.io/keysmith/)** — install command, CLI walkthrough, CyberVault pairing.
 
+Other Cybercore applications can use Keysmith's local Rust API
+(`keysmith::generate_passphrase`) or implement the versioned
+[`passphrase/v1` contract](docs/passphrase-api-v1.md). It uses the full EFF
+Large Wordlist and a platform CSPRNG; integrations generate secrets locally
+and do not send them to a service.
+
 ## 📦 Install
 
 ```bash
