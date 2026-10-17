@@ -2,26 +2,26 @@
 
 # 🔑 Keysmith
 
-[![CI](https://github.com/cybercore-tech/keysmith/actions/workflows/ci.yml/badge.svg)](https://github.com/cybercore-tech/keysmith/actions/workflows/ci.yml)
-[![Release](https://github.com/cybercore-tech/keysmith/actions/workflows/release.yml/badge.svg)](https://github.com/cybercore-tech/keysmith/actions/workflows/release.yml)
+[![CI](https://github.com/cybercoretech/keysmith/actions/workflows/ci.yml/badge.svg)](https://github.com/cybercoretech/keysmith/actions/workflows/ci.yml)
+[![Release](https://github.com/cybercoretech/keysmith/actions/workflows/release.yml/badge.svg)](https://github.com/cybercoretech/keysmith/actions/workflows/release.yml)
 
 `Rust` · `Argon2id` · `BLAKE3`
 
 **Password, passphrase, and hash generator.** One who makes keys.
 
-**[cybercore-tech.github.io/keysmith](https://cybercore-tech.github.io/keysmith/)** — install command, CLI walkthrough, CyberVault pairing.
+**[cybercoretech.github.io/keysmith](https://cybercoretech.github.io/keysmith/)** — install command, CLI walkthrough, CyberVault pairing.
 
 ## 📦 Install
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/cybercore-tech/keysmith/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/cybercoretech/keysmith/main/install.sh | sh
 ```
 
 Downloads the latest release for your platform (Linux or macOS, x86_64
 or aarch64), verifies its SHA-256 checksum, and installs `keysmith`
 to `~/.local/bin`. Or build from source with `cargo build --release`.
 
-Install [CyberVault](https://github.com/cybercore-tech/cybervault) too if
+Install [CyberVault](https://github.com/cybercoretech/cybervault) too if
 you want `--save <label>` (piping a generated secret straight into it)
 or CyberVault's own TUI calling back into Keysmith to generate on the
 spot (Ctrl+G/Ctrl+P) — each shells out to the other's binary on `PATH`,
@@ -39,7 +39,7 @@ keysmith pwhash                    # hash a password for storage (hidden prompt)
 keysmith pwhash --verify '$argon2id$v=19$...'   # check a password against a stored hash
 ```
 
-- **`password`** — random character-based, configurable charset (`--no-lower/--no-upper/--no-digits/--no-symbols`), `--exclude-ambiguous` drops visually-confusable characters (`0O1lI|`), `--count N` for a batch, `--copy` to the clipboard (`wl-copy`/`pbcopy`), `--save <label>` to pipe the first generated password straight into [CyberVault](https://github.com/cybercore-tech/cybervault) (`cybervault add <label>`), `--raw` for bare machine-readable output (also used by [CyberVault's own TUI](https://github.com/cybercore-tech/cybervault) to generate on demand)
+- **`password`** — random character-based, configurable charset (`--no-lower/--no-upper/--no-digits/--no-symbols`), `--exclude-ambiguous` drops visually-confusable characters (`0O1lI|`), `--count N` for a batch, `--copy` to the clipboard (`wl-copy`/`pbcopy`), `--save <label>` to pipe the first generated password straight into [CyberVault](https://github.com/cybercoretech/cybervault) (`cybervault add <label>`), `--raw` for bare machine-readable output (also used by [CyberVault's own TUI](https://github.com/cybercoretech/cybervault) to generate on demand)
 - **`passphrase`** — diceware-style, real words from the **actual EFF large wordlist** (7776 words, embedded at compile time — not a small hardcoded sample); also supports `--save <label>` and `--raw`
 - **`hash`** — SHA-256/SHA-512/BLAKE3 side by side, of text or a file. Checksums, for integrity — **not** for storing passwords
 - **`pwhash`** — Argon2id, the correct primitive for storing a password (deliberately slow + memory-hard + salted). Password is a hidden terminal prompt (`rpassword`, refuses piped/non-TTY input by design), never a CLI argument or plaintext on screen
@@ -73,7 +73,7 @@ verifying correctly either way.
 
 ## 🔐 CyberVault integration
 
-`--save <label>` doesn't link [CyberVault](https://github.com/cybercore-tech/cybervault)
+`--save <label>` doesn't link [CyberVault](https://github.com/cybercoretech/cybervault)
 as a library — it shells out to the standalone `cybervault add <label>`
 binary and pipes the first generated secret to it over stdin, the same
 "reuse via subprocess" pattern used everywhere else in this toolset.
