@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Install Keysmith from the latest GitHub release.
 #
-#   curl -fsSL https://raw.githubusercontent.com/cybercore-tech/keysmith/main/install.sh | sh
+#   curl -fsSL https://raw.githubusercontent.com/cybercoretech/keysmith/main/install.sh | sh
 #
 # Supported: Linux (x86_64, aarch64) and macOS (x86_64, aarch64).
 set -eu
