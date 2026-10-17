@@ -177,7 +177,7 @@
 </style>
 
 <div class="companion-banner">
-  Pairs with <a href="https://github.com/cybercore-tech/cybervault" target="_blank" rel="noopener">CyberVault</a> — <code>--save</code> pipes a generated secret straight into the vault.
+  Pairs with <a href="https://github.com/cybercoretech/cybervault" target="_blank" rel="noopener">CyberVault</a> — <code>--save</code> pipes a generated secret straight into the vault.
 </div>
 
 <nav>
@@ -190,7 +190,7 @@
       <a class="navlink" href="#generate">Generate</a>
       <a class="navlink" href="#hash">Hash</a>
       <a class="navlink" href="#install">Install</a>
-      <a class="navlink btn btn-ghost" style="padding:7px 15px;font-size:12.5px;" href="https://github.com/cybercore-tech/keysmith" target="_blank" rel="noopener">GitHub</a>
+      <a class="navlink btn btn-ghost" style="padding:7px 15px;font-size:12.5px;" href="https://github.com/cybercoretech/keysmith" target="_blank" rel="noopener">GitHub</a>
     </div>
   </div>
 </nav>
@@ -293,7 +293,7 @@
       </div>
       <div class="cmd-row">
         <span class="prompt">&gt;_</span>
-        <code id="ks-cmd" class="mono">curl -fsSL https://raw.githubusercontent.com/cybercore-tech/keysmith/main/install.sh | sh</code>
+        <code id="ks-cmd" class="mono">curl -fsSL https://raw.githubusercontent.com/cybercoretech/keysmith/main/install.sh | sh</code>
         <button class="copy-btn" onclick="ksCopy(this)" aria-label="Copy command">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
         </button>
@@ -303,13 +303,13 @@
         <p>Want to pipe generated secrets straight into a vault?</p>
         <div class="cmd-row" style="margin:0;">
           <span class="prompt">&gt;_</span>
-          <code class="mono">curl -fsSL https://raw.githubusercontent.com/cybercore-tech/cybervault/main/install.sh | sh</code>
+          <code class="mono">curl -fsSL https://raw.githubusercontent.com/cybercoretech/cybervault/main/install.sh | sh</code>
         </div>
       </div>
     </div>
     <p class="dl-count" id="dl-count">&hellip;</p>
     <div class="install-more">
-      <a href="https://github.com/cybercore-tech/keysmith#-what-it-does" target="_blank" rel="noopener">More install options &amp; manual builds →</a>
+      <a href="https://github.com/cybercoretech/keysmith#-what-it-does" target="_blank" rel="noopener">More install options &amp; manual builds →</a>
     </div>
   </div>
 </section>
@@ -321,8 +321,8 @@
       <span>Keysmith &middot; MIT licensed &middot; pairs with CyberVault</span>
     </div>
     <div class="foot-links">
-      <a href="https://github.com/cybercore-tech/keysmith" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://github.com/cybercore-tech/cybervault" target="_blank" rel="noopener">CyberVault</a>
+      <a href="https://github.com/cybercoretech/keysmith" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/cybercoretech/cybervault" target="_blank" rel="noopener">CyberVault</a>
       <a href="#install">Install</a>
     </div>
     <div class="foot-family">Cybercore family</div>
@@ -331,8 +331,8 @@
 
 <script>
   const CMDS = {
-    linux: 'curl -fsSL https://raw.githubusercontent.com/cybercore-tech/keysmith/main/install.sh | sh',
-    macos: 'curl -fsSL https://raw.githubusercontent.com/cybercore-tech/keysmith/main/install.sh | sh'
+    linux: 'curl -fsSL https://raw.githubusercontent.com/cybercoretech/keysmith/main/install.sh | sh',
+    macos: 'curl -fsSL https://raw.githubusercontent.com/cybercoretech/keysmith/main/install.sh | sh'
   };
   function ksSetOs(os) {
     document.querySelectorAll('.os-tab').forEach(t => t.classList.toggle('active', t.dataset.os === os));
