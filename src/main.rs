@@ -1,12 +1,12 @@
 mod clipboard;
 mod hash;
-mod password;
+
 mod pwhash;
 mod strength;
 mod vault_save;
 
 use clap::{Parser, Subcommand};
-use keysmith::{passphrase, wordlist};
+use keysmith::{passphrase, password, wordlist};
 use password::Charset;
 use std::path::PathBuf;
 use std::process::ExitCode;

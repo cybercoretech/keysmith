@@ -5,6 +5,7 @@
 //! device and never need to be sent to a server for generation.
 
 pub mod passphrase;
+pub mod password;
 pub mod wordlist;
 
 /// Stable options accepted by Keysmith's passphrase generator.
