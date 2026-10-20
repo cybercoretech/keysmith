@@ -30,6 +30,20 @@ mod tests {
     }
 
     #[test]
+    fn eff_large_asset_hash_is_pinned_for_integrations() {
+        use sha2::{Digest, Sha256};
+        let digest = Sha256::digest(RAW.as_bytes());
+        let hex = digest
+            .iter()
+            .map(|byte| format!("{byte:02x}"))
+            .collect::<String>();
+        assert_eq!(
+            hex,
+            "6d557f0693958fb5e650b68b5bee585eb82cf4da32965505c789e924743bc522"
+        );
+    }
+
+    #[test]
     fn all_words_are_lowercase_ascii_letters_or_hyphens() {
         // The real EFF list includes a handful of legitimate hyphenated
         // compounds ("t-shirt", "yo-yo", "drop-down", "felt-tip") — found
