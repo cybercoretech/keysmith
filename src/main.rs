@@ -14,7 +14,7 @@ use std::process::ExitCode;
 #[derive(Parser, Debug)]
 #[command(
     name = "keysmith",
-    version = "0.1.0",
+    version,
     about = "Password, passphrase, and hash generator"
 )]
 struct Args {
