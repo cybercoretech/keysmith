@@ -350,7 +350,7 @@
   }
   try { if (/Mac OS X|Macintosh/.test(navigator.userAgent)) ksSetOs('macos'); } catch (e) {}
 
-  fetch('https://api.github.com/repos/cybercore-tech/keysmith/releases/latest', { headers: { Accept: 'application/vnd.github+json' } })
+  fetch('https://api.github.com/repos/cybercoretech/keysmith/releases/latest', { headers: { Accept: 'application/vnd.github+json' } })
     .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(rel => {
       const dl = (rel.assets || [])
