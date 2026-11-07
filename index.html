@@ -175,6 +175,68 @@
     .navlinks .navlink { display: none; }
   }
 </style>
+  <link rel="stylesheet" href="https://cybercoretech.github.io/kit/chooser.css">
+  <style>
+    cybercore-theme-chooser{--ccx-bg:color-mix(in srgb,var(--void) 90%,var(--white));--ccx-fg:var(--white);--ccx-line:var(--line);--ccx-accent:var(--ember);--ccx-focus:var(--steel);--ccx-field:var(--void);--ccx-muted:var(--muted);--ccx-button-bg:transparent;--ccx-button-border:var(--line);--ccx-radius:8px;--ccx-button-width:auto;--ccx-height:2.25rem;--ccx-glow:.5;}
+  </style>  <style id="cc-mobile-first">
+/* Mobile floor (phones + tablets): readable text and finger-sized targets.
+   Generated per range from what renders under 11px / 24px; desktop untouched. */
+@media (max-width: 600px) {
+  div.foot-family { font-size: 11px !important; }
+}
+@media (min-width: 601px) and (max-width: 860px) {
+  div.foot-family { font-size: 11px !important; }
+}
+@media (min-width: 861px) and (max-width: 1024px) {
+  div.foot-family { font-size: 11px !important; }
+}
+@media (pointer: coarse) {
+  div.foot-links > a { min-height: 24px; min-width: 24px; }
+  div.companion-banner > a,
+  div.install-more > a { display: inline-flex; align-items: center; min-height: 24px; min-width: 24px; }
+}
+/* Mobile floor (phones + tablets): readable text and finger-sized targets.
+   Generated per range from what renders under 11px / 24px; desktop untouched. */
+@media (pointer: coarse) {
+  div.navlinks > a.navlink:not([style]) { min-height: 24px; min-width: 24px; }
+}
+/* Mobile floor (phones + tablets): readable text and finger-sized targets.
+   Generated per range from what renders under 11px / 24px; desktop untouched. */
+@media (max-width: 600px) {
+  p.install-note > code { font-size: 11px !important; }
+}
+@media (min-width: 601px) and (max-width: 860px) {
+  p.install-note > code { font-size: 11px !important; }
+}
+@media (min-width: 861px) and (max-width: 1024px) {
+  p.install-note > code { font-size: 11px !important; }
+}
+/* Layout fixes: phones and tablets only; laptops and desktops untouched. */
+@media (max-width: 1024px) {
+  /* Mobile first: nothing may make the page wider than the screen.
+     Grid/flex columns may shrink below their widest line; code scrolls in place. */
+  pre { max-width: 100%; overflow-x: auto; }
+  img, video { max-width: 100%; height: auto; }
+  div.wrap > * { min-width: 0; }
+  div.panel-bar > * { min-width: 0; }
+  pre { max-width: 100%; overflow-x: auto; }
+  /* Long paths and URLs in inline code may break anywhere instead of widening the page. */
+  :not(pre) > code { overflow-wrap: anywhere; }
+}
+  </style>
+
+
+
+
+
+
+
+
+
+
+  <script>window.SITE = Object.assign(window.SITE || {}, {"siteLabel": "Keysmith", "themeVars": {"bg": "--void", "orange": "--ember", "cyan": "--steel"}});</script>
+  <script type="module" src="https://cybercoretech.github.io/kit/chooser.js"></script>
+
 
 <div class="companion-banner">
   Pairs with <a href="https://github.com/cybercoretech/cybervault" target="_blank" rel="noopener">CyberVault</a> — <code>--save</code> pipes a generated secret straight into the vault.
@@ -190,10 +252,10 @@
       <a class="navlink" href="#generate">Generate</a>
       <a class="navlink" href="#hash">Hash</a>
       <a class="navlink" href="#install">Install</a>
+      <a class="navlink" data-cybercore-master-docs href="https://cybercoretech.github.io/cybercore/docs.html">Master docs ↗</a>
       <a class="navlink btn btn-ghost" style="padding:7px 15px;font-size:12.5px;" href="https://github.com/cybercoretech/keysmith" target="_blank" rel="noopener">GitHub</a>
-    </div>
-  </div>
-<a data-cybercore-master-docs href="https://cybercoretech.github.io/cybercore/docs.html" style="color:#22e6ff;border:1px solid #263454;border-radius:999px;padding:7px 12px;text-decoration:none;font:600 .7rem ui-monospace,monospace;letter-spacing:.08em;white-space:nowrap">MASTER DOCS ↗</a></nav>
+    <cybercore-theme-chooser match=".navlink"></cybercore-theme-chooser></div>
+  </div></nav>
 
 <header class="hero">
   <div class="wrap hero-grid">
